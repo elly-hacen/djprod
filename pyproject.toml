@@ -1,0 +1,22 @@
+[project]
+name = "djprod"
+version = "0.1.0"
+description = "Setup a production-ready Django projects with PostgreSQL or SQLite"
+authors = [{ name = "Ali Hassan", email = "alihassan.pyc@gmail.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["django", "django-environ", "psycopg2-binary", "rich"]
+
+[project.scripts]
+djprod = "djprod.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["djprod"]
+
+[tool.setuptools.package-data]
+"djprod" = ["../templates/**/*"]
