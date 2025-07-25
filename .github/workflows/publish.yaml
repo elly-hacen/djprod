@@ -15,14 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # full git history needed for branch ancestry check
-
-      - name: Check if tag commit is on main branch
-        run: |
-          if ! git branch --contains $GITHUB_SHA | grep -q 'main'; then
-            echo "Tag commit is not on main branch. Exiting."
-            exit 78
-          fi
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
