@@ -5,6 +5,7 @@
 __pycache__
 db.sqlite3
 media
+uv.lock
 
 # Backup files #
 *.bak
