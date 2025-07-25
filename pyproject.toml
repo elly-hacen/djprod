@@ -1,6 +1,6 @@
 [project]
 name = "djprod"
-version = "0.1.1"
+version = "0.2.2"
 description = "Yet another production-ready Django project."
 authors = [{ name = "Ali Hassan", email = "alihassan.pyc@gmail.com" }]
 license = "MIT"
