@@ -1,11 +1,11 @@
 import argparse
 from djprod.core import create_project
-
+from djprod.env_checker import EnvChecker
 
 class DjProdCLI(argparse.ArgumentParser):
     def __init__(self):
         super().__init__(
-            prog="dhprod",
+            prog="djprod",
             description="Generate production ready Django project."
         )
 
@@ -45,6 +45,7 @@ class DjProdCLI(argparse.ArgumentParser):
         )
 
 def main():
+    EnvChecker().check()
     DjProdCLI().dispatch()
 
 
